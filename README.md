@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js + Feature-Sliced Design | Чистый Шаблон
 
-## Getting Started
+## ВАЖНО
 
-First, run the development server:
+Не удаляйте папку `pages\*`, даже если вы используете App Router. Удаление папки `pages` приведет к [ошибке сборки](https://t.me/feature_sliced/1/107414).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+В WebStorm вы можете отметить каталог как [исключенный](https://www.jetbrains.com/help/webstorm/configuring-project-structure.html#content-root). После этого вы не будете видеть его в общих файлах (например, `node_modules` или `.next`).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ДОПОЛНИТЕЛЬНОЕ РЕШЕНИЕ ПРОБЛЕМЫ (НЕ РЕКОМЕНДУЕТСЯ)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Если вам не нравится пустая папка "pages" в корне проекта, вы можете переименовать слой `pages` (`./src/pages`), например, в `pagesLayer`, а затем удалить папку `pages` из корня проекта (также вам нужно будет изменить алиасы путей в `tsconfig` и аналогичных файлах).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Используйте то, что вам нравится больше :)**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Folders description
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Folder       | Description                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------- |
+| app          | Папка `App` для [App Routing](https://nextjs.org/docs/app/building-your-application/routing#the-app-router) |
+| pages \*     | Папка `Pages` для [Pages Routing](https://nextjs.org/docs/pages)                                            |
+| public       | Публичные файлы                                                                                           | src/app      | App слой FSD                                                                                                   |
+| src/pages    | Pages слой FSD                                                                                                 |
+| src/widgets  | Widgets слой FSD                                                                                               |
+| src/features | Features слой FSD                                                                                              |
+| src/entities | Entities слой FSD                                                                                              |
+| src/shared   | Shared слой FSD                                                                                               |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+**Этот шаблон использует такие помощники для разработки**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Eslint
+- Prettier
+- Stylelint
+- Jest
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Если вам это не нужно, вы можете отключить их в любое время, удалив зависимости из вашего package.json и .*rc файла.
