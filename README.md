@@ -123,3 +123,6 @@
 
 ![FSD Layers](https://habrastorage.org/webt/ek/0o/wi/ek0owiw6zqfn6j6zpogb7neyqmo.png)
 
+
+### Презентация
+1. [Презентация]([https://nextjs.org/docs/pages](https://docs.google.com/presentation/d/1dY98-F_sVpmx69KuXYs-unDy9q-CRwiQjKFZI8_VgPM/edit?usp=sharing)) 
