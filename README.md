@@ -1,4 +1,4 @@
-# Next.js + Feature-Sliced Design | Чистый Шаблон
+# Next.js + Feature-Sliced Design | Документация по проекту
 
 ## Важно
 
